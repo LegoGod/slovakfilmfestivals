@@ -17,26 +17,26 @@
             align-items: center;
         }
 
-        /* --- Title Container Styling --- */
+        /* --- NEW: Title Container Styling --- */
         .title-container {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            align-items: center; /* Vertically centers the logos with the text */
+            justify-content: center; /* Horizontally centers the group */
+            gap: 20px; /* Adds space between the logos and the title */
+            flex-wrap: wrap; /* Allows title to wrap on very small screens */
             margin-bottom: 15px;
         }
 
-        /* --- Logo Image Styling --- */
+        /* --- NEW: Logo Image Styling --- */
         .logo-img {
-            height: 50px; /* You can adjust this value */
-            width: auto;
+            height: 50px; /* You can adjust this value to make your logo bigger or smaller */
+            width: auto; /* Maintains the original aspect ratio */
         }
         
         h1 {
             color: #64b5f6;
             text-align: center;
-            margin: 0;
+            margin: 0; /* Removed margin from h1 as the container now handles spacing */
         }
 
         /* --- Disclaimer Text Styling --- */
@@ -118,11 +118,11 @@
 </head>
 <body>
 
-    <!-- UPDATED HTML with the correct logo filename -->
+    <!-- UPDATED HTML for the title section -->
     <div class="title-container">
-        <img src="logo-reversed.png" alt="Festival Logo" class="logo-img">
+        <img src="logo.png" alt="Festival Logo" class="logo-img">
         <h1>Slovak and Relevant Film Festivals for Students</h1>
-        <img src="logo-reversed.png" alt="Festival Logo" class="logo-img">
+        <img src="logo.png" alt="Festival Logo" class="logo-img">
     </div>
 
     <p class="disclaimer">Information about festivals listed on this page could be old and unupdated, so I recommend you check each one by yourself.</p>
