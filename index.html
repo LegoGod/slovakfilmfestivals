@@ -22,26 +22,32 @@
             align-items: center;
         }
 
-        /* --- Title Container Styling --- */
+        /* --- UPDATED: Fluid Title Container Styling --- */
         .title-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            width: 95%;
+            gap: clamp(10px, 2.5vw, 20px);
             margin-bottom: 15px;
         }
 
-        /* --- Logo Image Styling --- */
+        /* --- UPDATED: Fluid Logo Image Styling --- */
         .logo-img {
-            height: 200px; /* UPDATED VALUE: Was 40px, now smaller. Adjust as needed. */
+            /* The height now scales from 40px (min) to 60px (max) */
+            height: clamp(40px, 6vw, 60px);
             width: auto;
+            flex-shrink: 0;
         }
         
+        /* --- UPDATED: Fluid H1 Styling --- */
         h1 {
             color: #64b5f6;
-            margin-bottom: 15px; /* Reduced margin to bring disclaimer closer */
             text-align: center;
+            margin: 0;
+            /* The font-size now scales from 1.3em (min) to 2.2em (max) */
+            font-size: clamp(1.3em, 4vw, 2.2em);
+            line-height: 1.2;
         }
 
         /* --- Disclaimer Text Styling --- */
@@ -386,6 +392,7 @@
     </ul>
 </body>
 </html>
+
 
 
 
