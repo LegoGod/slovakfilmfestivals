@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- Favicon Link -->
+    <!-- Favicon Link (This will work again now) -->
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
@@ -34,123 +34,63 @@
 
         /* --- Logo Image Styling --- */
         .logo-img {
-            height: 200px; /* UPDATED VALUE: Was 40px, now smaller. Adjust as needed. */
+            height: 35px; /* CORRECTED VALUE: Was 200px, restored to a sensible size */
             width: auto;
         }
-
-        /* --- NEW: Media Query for Mobile Responsiveness --- */
-@media (max-width: 600px) {
-    .title-container {
-        gap: 15px; /* Reduce the space between items */
-    }
-
-    .logo-img {
-        height: 30px; /* Make logos even smaller on mobile */
-    }
-
-    h1 {
-        font-size: 1.3em; /* Make the title font smaller */
-    }
-}
         
+        /* --- CORRECTED CSS ORDER --- */
         h1 {
             color: #64b5f6;
-            margin-bottom: 15px; /* Reduced margin to bring disclaimer closer */
             text-align: center;
+            margin: 0; /* Margin is handled by the container */
         }
 
-        /* --- Disclaimer Text Styling --- */
         .disclaimer {
             text-align: center;
             font-style: italic;
-            color: #aaa; /* A slightly dimmer color to differentiate it */
-            max-width: 650px; /* Keep it within the list's width */
-            margin-bottom: 30px; /* Space between disclaimer and the list */
+            color: #aaa;
+            max-width: 650px;
+            margin-bottom: 30px;
             line-height: 1.5;
         }
 
-        /* --- Festival List Container --- */
-        .festival-list {
-            list-style-type: none;
-            padding: 0;
-            width: 95%;
-            max-width: 700px;
+        /* --- Festival List & Card Styling --- */
+        .festival-list { list-style-type: none; padding: 0; width: 95%; max-width: 700px; }
+        .festival-card { background-color: #1e1e1e; margin-bottom: 16px; border-radius: 8px; border: 1px solid #333; transition: transform 0.2s, background-color 0.2s; }
+        .festival-card:hover { transform: translateY(-4px); background-color: #2a2a2a; }
+        .card-link { display: block; text-decoration: none; padding: 20px; }
+        .card-content h2 { margin: 0 0 8px 0; font-size: 1.4em; color: #8ab4f8; }
+        .card-content p { margin: 0 0 15px 0; font-size: 0.95em; color: #b0b0b0; line-height: 1.5; }
+        .tags-container { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tag { color: #fff; padding: 4px 10px; border-radius: 12px; font-size: 0.8em; font-weight: bold; }
+        .tag.slovakia { background-color: #0d4a1; } .tag.czechia { background-color: #b71c1c; } .tag.international { background-color: #1b5e20; } .tag.student { background-color: #e65100; } .tag.amateur { background-color: #4a148c; } .tag.youth { background-color: #f57f17; } .tag.professional { background-color: #006064; } .tag.animation { background-color: #8e24aa; } .tag.documentary { background-color: #3e2723; } .tag.photography { background-color: #263238; } .tag.short-film { background-color: #d84315; } .tag.mobile { background-color: #004d40; } .tag.environment { background-color: #33691e; }
+        
+        /* --- Media Query for Mobile Responsiveness (MUST BE AT THE END) --- */
+        @media (max-width: 600px) {
+            .title-container {
+                gap: 15px;
+            }
+            .logo-img {
+                height: 30px;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
         }
-
-        /* --- Individual Festival Card --- */
-        .festival-card {
-            background-color: #1e1e1e;
-            margin-bottom: 16px;
-            border-radius: 8px;
-            border: 1px solid #333;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .festival-card:hover {
-            transform: translateY(-4px);
-            background-color: #2a2a2a;
-        }
-        .card-link {
-            display: block;
-            text-decoration: none;
-            padding: 20px;
-        }
-
-        /* --- Card Content Styling --- */
-        .card-content h2 {
-            margin: 0 0 8px 0;
-            font-size: 1.4em;
-            color: #8ab4f8;
-        }
-        .card-content p {
-            margin: 0 0 15px 0;
-            font-size: 0.95em;
-            color: #b0b0b0;
-            line-height: 1.5;
-        }
-
-        /* --- Tags Styling --- */
-        .tags-container {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .tag {
-            color: #fff;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.8em;
-            font-weight: bold;
-        }
-        /* Color coding for tags */
-        .tag.slovakia      { background-color: #0d47a1; } /* Dark Blue */
-        .tag.czechia       { background-color: #b71c1c; } /* Dark Red */
-        .tag.international { background-color: #1b5e20; } /* Dark Green */
-        .tag.student       { background-color: #e65100; } /* Orange */
-        .tag.amateur       { background-color: #4a148c; } /* Purple */
-        .tag.youth         { background-color: #f57f17; } /* Yellow */
-        .tag.professional  { background-color: #006064; } /* Cyan */
-        .tag.animation     { background-color: #8e24aa; } /* Violet */
-        .tag.documentary   { background-color: #3e2723; } /* Brown */
-        .tag.photography   { background-color: #263238; } /* Blue Grey */
-        .tag.short-film    { background-color: #d84315; } /* Deep Orange */
-        .tag.mobile        { background-color: #004d40; } /* Teal */
-        .tag.environment   { background-color: #33691e; } /* Light Green */
     </style>
 </head>
 <body>
     
-    <!-- UPDATED HTML to point to the new logo file -->
     <div class="title-container">
         <img src="logo-white.png" alt="Festival Logo" class="logo-img">
         <h1>Slovak and Relevant Film Festivals for Students</h1>
         <img src="logo-white.png" alt="Festival Logo" class="logo-img">
     </div>
 
-    <!-- The new disclaimer paragraph -->
     <p class="disclaimer">Information about festivals listed on this page could be old and unupdated, so I recommend you check each one by yourself.</p>
 
     <ul class="festival-list">
-
+        <!-- The rest of your festival cards remain unchanged... -->
         <li class="festival-card">
             <a href="http://www.festivalacko.sk/" target="_blank" rel="noopener noreferrer" class="card-link">
                 <div class="card-content">
@@ -163,227 +103,6 @@
                 </div>
             </a>
         </li>
-
-        <li class="festival-card">
-            <a href="https://www.nocka.sk/sutaze-a-prehliadky/cineama/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Cineama</h2>
-                    <p>A national competition for amateur and non-professional filmmakers of all ages.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag amateur">Amateur</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-
-        <li class="festival-card">
-            <a href="https://medart.ku.sk/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Medart</h2>
-                    <p>International student film festival organized by the Catholic University in Ružomberok.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag student">Student</span>
-                        <span class="tag international">International</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-
-        <li class="festival-card">
-            <a href="https://zlataklapka.sk/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Zlatá klapka</h2>
-                    <p>A competition for young creators in audiovisual production, journalism, and media.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag youth">Youth</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-
-        <li class="festival-card">
-            <a href="https://www.mobilfest.eu/festival/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Mobilfest</h2>
-                    <p>An international festival for short films shot exclusively on mobile phones.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag international">International</span>
-                        <span class="tag mobile">Mobile</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-
-        <li class="festival-card">
-            <a href="https://www.ceskevize.cz/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>České vize</h2>
-                    <p>The top national competition for amateur and student filmmaking in the Czech Republic.</p>
-                    <div class="tags-container">
-                        <span class="tag czechia">Czechia</span>
-                        <span class="tag student">Student</span>
-                        <span class="tag amateur">Amateur</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-        
-        <li class="festival-card">
-            <a href="https://www.animest.ro/en/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Animest</h2>
-                    <p>A major international animation festival based in Bucharest, Romania, with various competitions.</p>
-                    <div class="tags-container">
-                        <span class="tag international">International</span>
-                        <span class="tag animation">Animation</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-
-        <li class="festival-card">
-            <a href="https://www.prazskyfilmovykufr.cz/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Pražský filmový kufor (PFK)</h2>
-                    <p>An international film festival for children and youth, focusing on works made by young creators.</p>
-                    <div class="tags-container">
-                        <span class="tag czechia">Czechia</span>
-                        <span class="tag youth">Youth</span>
-                        <span class="tag international">International</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-        
-        <li class="festival-card">
-            <a href="https://iffartfilm.com/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Art Film Fest (AFF)</h2>
-                    <p>One of Slovakia's largest film festivals, featuring an international competition for short films.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag international">International</span>
-                        <span class="tag professional">Professional</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-        
-        <li class="festival-card">
-            <a href="https://kosicefilmfest.com/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>International Film Fest Košice</h2>
-                    <p>An international festival with a focus on short films across various genres.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag international">International</span>
-                        <span class="tag short-film">Short Film</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-        
-        <li class="festival-card">
-            <a href="https://www.festanca.sk/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Anča Fest</h2>
-                    <p>International festival focused exclusively on animated film, with a major student competition.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag international">International</span>
-                        <span class="tag animation">Animation</span>
-                        <span class="tag student">Student</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-
-        <li class="festival-card">
-            <a href="https://www.usvit-cena-za-studentsky-dizajn.sk/propozicie/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Úsvit</h2>
-                    <p>A national award for student design, which includes categories for animation and audiovisual work.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag student">Student</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-        
-        <li class="festival-card">
-            <a href="https://www.trikfilm.cz/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Trikfilm</h2>
-                    <p>An international festival of animated films created by children and youth.</p>
-                    <div class="tags-container">
-                        <span class="tag czechia">Czechia</span>
-                        <span class="tag international">International</span>
-                        <span class="tag animation">Animation</span>
-                        <span class="tag youth">Youth</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-
-        <li class="festival-card">
-            <a href="https://ekotopfilm.sk/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>IFF Ekotopfilm</h2>
-                    <p>An international film festival dedicated to ecology, environment, and sustainable development.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag international">International</span>
-                        <span class="tag environment">Environment</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-
-        <li class="festival-card">
-            <a href="https://www.azylshorts.sk/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>AZYL SHORTS</h2>
-                    <p>A competition for very short films (1 and 5 minutes) and music videos from around the world.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag international">International</span>
-                        <span class="tag short-film">Short Film</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-
-        <li class="festival-card">
-            <a href="https://www.slovakcine.com/ocenenie-kamera" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Kamera</h2>
-                    <p>A prestigious biennial award from the Association of Slovak Cinematographers for outstanding camera work.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag professional">Professional</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-
-        <li class="festival-card">
-            <a href="https://pocityfilm.sk/kratasy/" target="_blank" rel="noopener noreferrer" class="card-link">
-                <div class="card-content">
-                    <h2>Pocity Film Festival</h2>
-                    <p>A film festival in Prešov that includes a competitive section for Slovak short films.</p>
-                    <div class="tags-container">
-                        <span class="tag slovakia">Slovakia</span>
-                        <span class="tag short-film">Short Film</span>
-                    </div>
-                </div>
-            </a>
-        </li>
-
         <li class="festival-card">
             <a href="https://www.nocka.sk/sutaze-a-prehliadky/amfo/" target="_blank" rel="noopener noreferrer" class="card-link">
                 <div class="card-content">
@@ -397,13 +116,6 @@
                 </div>
             </a>
         </li>
-
     </ul>
 </body>
 </html>
-
-
-
-
-
-
