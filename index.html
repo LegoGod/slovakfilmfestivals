@@ -37,6 +37,21 @@
             height: 200px; /* UPDATED VALUE: Was 40px, now smaller. Adjust as needed. */
             width: auto;
         }
+
+        /* --- NEW: Media Query for Mobile Responsiveness --- */
+@media (max-width: 600px) {
+    .title-container {
+        gap: 15px; /* Reduce the space between items */
+    }
+
+    .logo-img {
+        height: 30px; /* Make logos even smaller on mobile */
+    }
+
+    h1 {
+        font-size: 1.3em; /* Make the title font smaller */
+    }
+}
         
         h1 {
             color: #64b5f6;
@@ -386,6 +401,7 @@
     </ul>
 </body>
 </html>
+
 
 
 
